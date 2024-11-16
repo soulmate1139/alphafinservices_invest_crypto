@@ -1,0 +1,6 @@
+<script>
+  const params = new URLSearchParams(document.location.search);
+  var referral = params.get("id");
+  localStorage.setItem("has_referral", referral);
+  window.location.href = "auth/trade/register.html";
+</script>

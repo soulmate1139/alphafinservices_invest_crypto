@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Mirrored from Alphafinservices.com/trade/register by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 May 2024 12:47:45 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="csrf-token" content="BxArtKdV7pn1re2M85Gf6F0GVnpg0hBQrdo9bwue" />
+  <title>Alphafinservices | Creaet Account</title>
+
+  <link rel="icon" href="storage/app/public/photos/upload-favicon.html" type="image/png" />
+
+  <link href="temp/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <!-- Icons -->
+  <link href="temp/css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+
+  <link rel="stylesheet" href="temp/css/line.css" />
+
+  <!-- Main Css -->
+  <link href="temp/css/style.css" rel="stylesheet" type="text/css" />
+  <link href="temp/css/colors/default.css" rel="stylesheet" />
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+  <!--iOS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <link rel="stylesheet" href="loader_packages/style.css" />
+  <link rel="stylesheet" href="loader_packages/css/normalize.css" />
+  <link rel="stylesheet" href="loader_packages/css/main.css" />
+  <script src="loader_packages/js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body class="h-100 bg-soft-primary">
+  <!-- LOADER -->
+  <div class="demo" id="divElement" style="display: none">
+    <!-- Demo content -->
+    <div id="demo-content">
+      <header class="entry-header">
+        <nav class="back-link">
+          <span class="nav-previous"><a href="#" rel="prev"><span class="meta-nav"></span> Almost
+              done<i>&larr;</i></a></span>
+        </nav>
+        <!-- .nav-single -->
+
+        <h1 class="entry-title">Setting up your account!</h1>
+      </header>
+
+      <div id="loader-wrapper">
+        <div id="loader"></div>
+      </div>
+    </div>
+    <!-- /Demo content -->
+
+    <script src="loader_packages/js/main.js"></script>
+  </div>
+  <!-- LOADER -->
+
+  <section id="container_body" class="y auth">
+    <div class="container">
+      <div class="pb-3 row justify-content-center">
+        <div class="col-12 col-md-6 col-lg-6 col-sm-10 col-xl-6">
+          <!-- <a href="../index.html"><img src="fxpro.png" alt=""
+              class="mb-3 img-fluid auth__logo" /></a> -->
+
+          <!-- ALERT BOX -->
+          <div class="alert alert-danger" style="display: none" id="login_alert_box">
+            <button type="button" class="text-white close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+            <ul>
+              <li id="login_alert_msg"></li>
+            </ul>
+          </div>
+          <!-- ALERT BOX -->
+
+          <div class="bg-white shadow card login-page roundedd border-1">
+            <div class="card-body">
+              <h4 class="text-center card-title">Verify Your Account</h4>
+              <div id="verify_form" class="mt-4 login-form">
+                <br /><br />
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <label>OTP Code: <span class="text-danger">*</span></label>
+                      <div class="position-relative">
+                        <i data-feather="key" class="fea icon-sm icons"></i>
+                        <input type="text" class="pl-5 form-control" name="otp" id="otp" placeholder="Enter OTP Code"
+                          required />
+                      </div>
+                    </div>
+                  </div>
+                  <!--end col-->
+
+                  <div class="mb-0 col-lg-12">
+                    <button class="btn btn-primary btn-block pad" type="button" onclick="verify()">
+                      Submit
+                    </button>
+                  </div>
+                  <!--end col-->
+
+                  <div class="mb-0 col-lg-12">
+                    <button class="btn btn-light btn-block pad" type="button" onclick="resend()">
+                      Resend
+                    </button>
+                  </div>
+                  <!--end col-->
+                  <br><br><br><br>
+                  <div class="text-center col-12">
+                    <p class="mt-4 mb-0">
+                      <small class="mr-2 text-dark">&copy; Copyright 2024 &nbsp; Alphafinservices &nbsp;
+                        All Rights Reserved.</small>
+                    </p>
+                  </div>
+                </div>
+                <!--end row-->
+                </form>
+              </div>
+            </div>
+            <!---->
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+      </div>
+      <!--end container-->
+  </section>
+  <!--end section-->
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+
+  <script src="../index.js"></script>
+  <script>
+    var email = localStorage.getItem("email_me");
+    var user_id = localStorage.getItem("user_id");
+    var name = localStorage.getItem("name");
+
+    async function verify() {
+      var userData = await fetchUserData(user_id);
+      var differenceInMillis = Math.abs(new Date() - new Date(userData.otp_time));
+      var differenceInMinutes = differenceInMillis / (1000 * 60);
+      var inputOtp = document.getElementById("otp").value;
+      if (inputOtp != userData.otp) {
+        var error_message = "Incorrect code";
+        alertBox.style.display = "block";
+        alertBox.innerHTML = error_message;
+      }
+      else {
+        if (differenceInMinutes > 5) {
+          var error_message = "Code expired";
+          alertBox.style.display = "block";
+          alertBox.innerHTML = error_message;
+        } else {
+          userData.verify_status = "verified";
+          localStorage.setItem("isverified", "true");
+          await saveUserData(userData);
+          goToDashboard();
+        }
+      }
+    }
+
+    async function resend() {
+      var newOtp = Math.floor(100000 + Math.random() * 900000);
+      var data = {
+        type: "code",
+        email: email,
+        subject: "WELCOME TO ALPHAFINSERVICES",
+        msg: newOtp,
+        name: name
+        // msg: "Your OTP code is <b>" + newOtpkc + "</b>",
+      };
+      var temp = JSON.stringify(data);
+
+      var userData = await fetchUserData(user_id);
+      console.log(userData);
+      userData.otp = newOtp;
+      userData.otp_time = new Date().toString();
+      await saveUserData(userData);
+      var message = "Code sent!";
+      alertBox.classList.remove("alert-danger");
+      alertBox.classList.add("alert-success");
+      alertBox.style.display = "block";
+      alertBox.innerHTML = message;
+
+            $.ajax({
+        type: "post",
+        dataType: "json",
+        url: "../php/send.php",
+        data: { data: temp },
+        success: function (status) {
+          if (status == "success") {
+          } else {
+            alertBox.classList.remove("alert-success");
+            alertBox.classList.add("alert-danger");
+            alertBox.style.display = "block";
+            alertBox.innerHTML = "something went wrong, try again.";
+          }
+        },
+        error: function (status) {
+          alert("Network Issues!");
+          console.log(status);
+        },
+      });
+    }
+  </script>
+  <script src="temp/js/jquery-3.5.1.min.js"></script>
+  <script src="temp/js/bootstrap.bundle.min.js"></script>
+
+  <!-- SLIDER -->
+  <script src="temp/js/owl.carousel.min.js"></script>
+  <script src="temp/js/owl.init.js"></script>
+  <!-- Icons -->
+  <script src="temp/js/feather.min.js"></script>
+  <script src="temp/js/bundle.html"></script>
+
+  <script src="temp/js/app.js"></script>
+  <script src="temp/js/widget.js"></script>
+
+  <!-- Personal Script -->
+  <!-- <script src="../index.js"></script> -->
+
+  <script>
+    $("#input1").on("keypress", function (e) {
+      return e.which !== 32;
+    });
+  </script>
+
+  <script src="js/jquery.min.js"></script>
+</body>
+
+<!-- Mirrored from Alphafinservices.com/trade/register by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 May 2024 12:47:46 GMT -->
+
+</html>

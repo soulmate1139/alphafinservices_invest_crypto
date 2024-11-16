@@ -1,0 +1,3021 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://fxprostreamtrade.com/trade/dashboard/withdraw-funds -->
+<html
+  lang="en"
+  data-lt-installed="true"
+  class="sidebar-color"
+  style="height: 100%"
+>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+      .swal-icon--error {
+        border-color: #f27474;
+        -webkit-animation: animateErrorIcon 0.5s;
+        animation: animateErrorIcon 0.5s;
+      }
+      .swal-icon--error__x-mark {
+        position: relative;
+        display: block;
+        -webkit-animation: animateXMark 0.5s;
+        animation: animateXMark 0.5s;
+      }
+      .swal-icon--error__line {
+        position: absolute;
+        height: 5px;
+        width: 47px;
+        background-color: #f27474;
+        display: block;
+        top: 37px;
+        border-radius: 2px;
+      }
+      .swal-icon--error__line--left {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        left: 17px;
+      }
+      .swal-icon--error__line--right {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        right: 16px;
+      }
+      @-webkit-keyframes animateErrorIcon {
+        0% {
+          -webkit-transform: rotateX(100deg);
+          transform: rotateX(100deg);
+          opacity: 0;
+        }
+        to {
+          -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+          opacity: 1;
+        }
+      }
+      @keyframes animateErrorIcon {
+        0% {
+          -webkit-transform: rotateX(100deg);
+          transform: rotateX(100deg);
+          opacity: 0;
+        }
+        to {
+          -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+          opacity: 1;
+        }
+      }
+      @-webkit-keyframes animateXMark {
+        0% {
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          margin-top: 26px;
+          opacity: 0;
+        }
+        50% {
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          margin-top: 26px;
+          opacity: 0;
+        }
+        80% {
+          -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+          margin-top: -6px;
+        }
+        to {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          margin-top: 0;
+          opacity: 1;
+        }
+      }
+      @keyframes animateXMark {
+        0% {
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          margin-top: 26px;
+          opacity: 0;
+        }
+        50% {
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          margin-top: 26px;
+          opacity: 0;
+        }
+        80% {
+          -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+          margin-top: -6px;
+        }
+        to {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          margin-top: 0;
+          opacity: 1;
+        }
+      }
+      .swal-icon--warning {
+        border-color: #f8bb86;
+        -webkit-animation: pulseWarning 0.75s infinite alternate;
+        animation: pulseWarning 0.75s infinite alternate;
+      }
+      .swal-icon--warning__body {
+        width: 5px;
+        height: 47px;
+        top: 10px;
+        border-radius: 2px;
+        margin-left: -2px;
+      }
+      .swal-icon--warning__body,
+      .swal-icon--warning__dot {
+        position: absolute;
+        left: 50%;
+        background-color: #f8bb86;
+      }
+      .swal-icon--warning__dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        margin-left: -4px;
+        bottom: -11px;
+      }
+      @-webkit-keyframes pulseWarning {
+        0% {
+          border-color: #f8d486;
+        }
+        to {
+          border-color: #f8bb86;
+        }
+      }
+      @keyframes pulseWarning {
+        0% {
+          border-color: #f8d486;
+        }
+        to {
+          border-color: #f8bb86;
+        }
+      }
+      .swal-icon--success {
+        border-color: #a5dc86;
+      }
+      .swal-icon--success:after,
+      .swal-icon--success:before {
+        content: "";
+        border-radius: 50%;
+        position: absolute;
+        width: 60px;
+        height: 120px;
+        background: #fff;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      .swal-icon--success:before {
+        border-radius: 120px 0 0 120px;
+        top: -7px;
+        left: -33px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: 60px 60px;
+        transform-origin: 60px 60px;
+      }
+      .swal-icon--success:after {
+        border-radius: 0 120px 120px 0;
+        top: -11px;
+        left: 30px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: 0 60px;
+        transform-origin: 0 60px;
+        -webkit-animation: rotatePlaceholder 4.25s ease-in;
+        animation: rotatePlaceholder 4.25s ease-in;
+      }
+      .swal-icon--success__ring {
+        width: 80px;
+        height: 80px;
+        border: 4px solid hsla(98, 55%, 69%, 0.2);
+        border-radius: 50%;
+        box-sizing: content-box;
+        position: absolute;
+        left: -4px;
+        top: -4px;
+        z-index: 2;
+      }
+      .swal-icon--success__hide-corners {
+        width: 5px;
+        height: 90px;
+        background-color: #fff;
+        padding: 1px;
+        position: absolute;
+        left: 28px;
+        top: 8px;
+        z-index: 1;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+      .swal-icon--success__line {
+        height: 5px;
+        background-color: #a5dc86;
+        display: block;
+        border-radius: 2px;
+        position: absolute;
+        z-index: 2;
+      }
+      .swal-icon--success__line--tip {
+        width: 25px;
+        left: 14px;
+        top: 46px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-animation: animateSuccessTip 0.75s;
+        animation: animateSuccessTip 0.75s;
+      }
+      .swal-icon--success__line--long {
+        width: 47px;
+        right: 8px;
+        top: 38px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-animation: animateSuccessLong 0.75s;
+        animation: animateSuccessLong 0.75s;
+      }
+      @-webkit-keyframes rotatePlaceholder {
+        0% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        5% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        12% {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+        to {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+      }
+      @keyframes rotatePlaceholder {
+        0% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        5% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        12% {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+        to {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+      }
+      @-webkit-keyframes animateSuccessTip {
+        0% {
+          width: 0;
+          left: 1px;
+          top: 19px;
+        }
+        54% {
+          width: 0;
+          left: 1px;
+          top: 19px;
+        }
+        70% {
+          width: 50px;
+          left: -8px;
+          top: 37px;
+        }
+        84% {
+          width: 17px;
+          left: 21px;
+          top: 48px;
+        }
+        to {
+          width: 25px;
+          left: 14px;
+          top: 45px;
+        }
+      }
+      @keyframes animateSuccessTip {
+        0% {
+          width: 0;
+          left: 1px;
+          top: 19px;
+        }
+        54% {
+          width: 0;
+          left: 1px;
+          top: 19px;
+        }
+        70% {
+          width: 50px;
+          left: -8px;
+          top: 37px;
+        }
+        84% {
+          width: 17px;
+          left: 21px;
+          top: 48px;
+        }
+        to {
+          width: 25px;
+          left: 14px;
+          top: 45px;
+        }
+      }
+      @-webkit-keyframes animateSuccessLong {
+        0% {
+          width: 0;
+          right: 46px;
+          top: 54px;
+        }
+        65% {
+          width: 0;
+          right: 46px;
+          top: 54px;
+        }
+        84% {
+          width: 55px;
+          right: 0;
+          top: 35px;
+        }
+        to {
+          width: 47px;
+          right: 8px;
+          top: 38px;
+        }
+      }
+      @keyframes animateSuccessLong {
+        0% {
+          width: 0;
+          right: 46px;
+          top: 54px;
+        }
+        65% {
+          width: 0;
+          right: 46px;
+          top: 54px;
+        }
+        84% {
+          width: 55px;
+          right: 0;
+          top: 35px;
+        }
+        to {
+          width: 47px;
+          right: 8px;
+          top: 38px;
+        }
+      }
+      .swal-icon--info {
+        border-color: #c9dae1;
+      }
+      .swal-icon--info:before {
+        width: 5px;
+        height: 29px;
+        bottom: 17px;
+        border-radius: 2px;
+        margin-left: -2px;
+      }
+      .swal-icon--info:after,
+      .swal-icon--info:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        background-color: #c9dae1;
+      }
+      .swal-icon--info:after {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        margin-left: -3px;
+        top: 19px;
+      }
+      .swal-icon {
+        width: 80px;
+        height: 80px;
+        border-width: 4px;
+        border-style: solid;
+        border-radius: 50%;
+        padding: 0;
+        position: relative;
+        box-sizing: content-box;
+        margin: 20px auto;
+      }
+      .swal-icon:first-child {
+        margin-top: 32px;
+      }
+      .swal-icon--custom {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        border: none;
+        border-radius: 0;
+      }
+      .swal-icon img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .swal-title {
+        color: rgba(0, 0, 0, 0.65);
+        font-weight: 600;
+        text-transform: none;
+        position: relative;
+        display: block;
+        padding: 13px 16px;
+        font-size: 27px;
+        line-height: normal;
+        text-align: center;
+        margin-bottom: 0;
+      }
+      .swal-title:first-child {
+        margin-top: 26px;
+      }
+      .swal-title:not(:first-child) {
+        padding-bottom: 0;
+      }
+      .swal-title:not(:last-child) {
+        margin-bottom: 13px;
+      }
+      .swal-text {
+        font-size: 16px;
+        position: relative;
+        float: none;
+        line-height: normal;
+        vertical-align: top;
+        text-align: left;
+        display: inline-block;
+        margin: 0;
+        padding: 0 10px;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.64);
+        max-width: calc(100% - 20px);
+        overflow-wrap: break-word;
+        box-sizing: border-box;
+      }
+      .swal-text:first-child {
+        margin-top: 45px;
+      }
+      .swal-text:last-child {
+        margin-bottom: 45px;
+      }
+      .swal-footer {
+        text-align: right;
+        padding-top: 13px;
+        margin-top: 13px;
+        padding: 13px 16px;
+        border-radius: inherit;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+      .swal-button-container {
+        margin: 5px;
+        display: inline-block;
+        position: relative;
+      }
+      .swal-button {
+        background-color: #7cd1f9;
+        color: #fff;
+        border: none;
+        box-shadow: none;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 10px 24px;
+        margin: 0;
+        cursor: pointer;
+      }
+      .swal-button[not:disabled]:hover {
+        background-color: #78cbf2;
+      }
+      .swal-button:active {
+        background-color: #70bce0;
+      }
+      .swal-button:focus {
+        outline: none;
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(43, 114, 165, 0.29);
+      }
+      .swal-button[disabled] {
+        opacity: 0.5;
+        cursor: default;
+      }
+      .swal-button::-moz-focus-inner {
+        border: 0;
+      }
+      .swal-button--cancel {
+        color: #555;
+        background-color: #efefef;
+      }
+      .swal-button--cancel[not:disabled]:hover {
+        background-color: #e8e8e8;
+      }
+      .swal-button--cancel:active {
+        background-color: #d7d7d7;
+      }
+      .swal-button--cancel:focus {
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(116, 136, 150, 0.29);
+      }
+      .swal-button--danger {
+        background-color: #e64942;
+      }
+      .swal-button--danger[not:disabled]:hover {
+        background-color: #df4740;
+      }
+      .swal-button--danger:active {
+        background-color: #cf423b;
+      }
+      .swal-button--danger:focus {
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(165, 43, 43, 0.29);
+      }
+      .swal-content {
+        padding: 0 20px;
+        margin-top: 20px;
+        font-size: medium;
+      }
+      .swal-content:last-child {
+        margin-bottom: 20px;
+      }
+      .swal-content__input,
+      .swal-content__textarea {
+        -webkit-appearance: none;
+        background-color: #fff;
+        border: none;
+        font-size: 14px;
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.14);
+        padding: 10px 13px;
+        border-radius: 2px;
+        transition: border-color 0.2s;
+      }
+      .swal-content__input:focus,
+      .swal-content__textarea:focus {
+        outline: none;
+        border-color: #6db8ff;
+      }
+      .swal-content__textarea {
+        resize: vertical;
+      }
+      .swal-button--loading {
+        color: transparent;
+      }
+      .swal-button--loading ~ .swal-button__loader {
+        opacity: 1;
+      }
+      .swal-button__loader {
+        position: absolute;
+        height: auto;
+        width: 43px;
+        z-index: 2;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+        pointer-events: none;
+        opacity: 0;
+      }
+      .swal-button__loader div {
+        display: inline-block;
+        float: none;
+        vertical-align: baseline;
+        width: 9px;
+        height: 9px;
+        padding: 0;
+        border: none;
+        margin: 2px;
+        opacity: 0.4;
+        border-radius: 7px;
+        background-color: hsla(0, 0%, 100%, 0.9);
+        transition: background 0.2s;
+        -webkit-animation: swal-loading-anim 1s infinite;
+        animation: swal-loading-anim 1s infinite;
+      }
+      .swal-button__loader div:nth-child(3n + 2) {
+        -webkit-animation-delay: 0.15s;
+        animation-delay: 0.15s;
+      }
+      .swal-button__loader div:nth-child(3n + 3) {
+        -webkit-animation-delay: 0.3s;
+        animation-delay: 0.3s;
+      }
+      @-webkit-keyframes swal-loading-anim {
+        0% {
+          opacity: 0.4;
+        }
+        20% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 1;
+        }
+        to {
+          opacity: 0.4;
+        }
+      }
+      @keyframes swal-loading-anim {
+        0% {
+          opacity: 0.4;
+        }
+        20% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 1;
+        }
+        to {
+          opacity: 0.4;
+        }
+      }
+      .swal-overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 0;
+        overflow-y: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 10000;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .swal-overlay:before {
+        content: " ";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+      }
+      .swal-overlay--show-modal {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .swal-overlay--show-modal .swal-modal {
+        opacity: 1;
+        pointer-events: auto;
+        box-sizing: border-box;
+        -webkit-animation: showSweetAlert 0.3s;
+        animation: showSweetAlert 0.3s;
+        will-change: transform;
+      }
+      .swal-modal {
+        width: 478px;
+        opacity: 0;
+        pointer-events: none;
+        background-color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        position: static;
+        margin: 20px auto;
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        z-index: 10001;
+        transition: opacity 0.2s, -webkit-transform 0.3s;
+        transition: transform 0.3s, opacity 0.2s;
+        transition: transform 0.3s, opacity 0.2s, -webkit-transform 0.3s;
+      }
+      @media (max-width: 500px) {
+        .swal-modal {
+          width: calc(100% - 20px);
+        }
+      }
+      @-webkit-keyframes showSweetAlert {
+        0% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+        1% {
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+        }
+        45% {
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+        }
+        80% {
+          -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+        }
+        to {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+      @keyframes showSweetAlert {
+        0% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+        1% {
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+        }
+        45% {
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+        }
+        80% {
+          -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+        }
+        to {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+    </style>
+    <style type="text/css">
+      .swal-icon--error {
+        border-color: #f27474;
+        -webkit-animation: animateErrorIcon 0.5s;
+        animation: animateErrorIcon 0.5s;
+      }
+      .swal-icon--error__x-mark {
+        position: relative;
+        display: block;
+        -webkit-animation: animateXMark 0.5s;
+        animation: animateXMark 0.5s;
+      }
+      .swal-icon--error__line {
+        position: absolute;
+        height: 5px;
+        width: 47px;
+        background-color: #f27474;
+        display: block;
+        top: 37px;
+        border-radius: 2px;
+      }
+      .swal-icon--error__line--left {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        left: 17px;
+      }
+      .swal-icon--error__line--right {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        right: 16px;
+      }
+      @-webkit-keyframes animateErrorIcon {
+        0% {
+          -webkit-transform: rotateX(100deg);
+          transform: rotateX(100deg);
+          opacity: 0;
+        }
+        to {
+          -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+          opacity: 1;
+        }
+      }
+      @keyframes animateErrorIcon {
+        0% {
+          -webkit-transform: rotateX(100deg);
+          transform: rotateX(100deg);
+          opacity: 0;
+        }
+        to {
+          -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+          opacity: 1;
+        }
+      }
+      @-webkit-keyframes animateXMark {
+        0% {
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          margin-top: 26px;
+          opacity: 0;
+        }
+        50% {
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          margin-top: 26px;
+          opacity: 0;
+        }
+        80% {
+          -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+          margin-top: -6px;
+        }
+        to {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          margin-top: 0;
+          opacity: 1;
+        }
+      }
+      @keyframes animateXMark {
+        0% {
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          margin-top: 26px;
+          opacity: 0;
+        }
+        50% {
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          margin-top: 26px;
+          opacity: 0;
+        }
+        80% {
+          -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+          margin-top: -6px;
+        }
+        to {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          margin-top: 0;
+          opacity: 1;
+        }
+      }
+      .swal-icon--warning {
+        border-color: #f8bb86;
+        -webkit-animation: pulseWarning 0.75s infinite alternate;
+        animation: pulseWarning 0.75s infinite alternate;
+      }
+      .swal-icon--warning__body {
+        width: 5px;
+        height: 47px;
+        top: 10px;
+        border-radius: 2px;
+        margin-left: -2px;
+      }
+      .swal-icon--warning__body,
+      .swal-icon--warning__dot {
+        position: absolute;
+        left: 50%;
+        background-color: #f8bb86;
+      }
+      .swal-icon--warning__dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        margin-left: -4px;
+        bottom: -11px;
+      }
+      @-webkit-keyframes pulseWarning {
+        0% {
+          border-color: #f8d486;
+        }
+        to {
+          border-color: #f8bb86;
+        }
+      }
+      @keyframes pulseWarning {
+        0% {
+          border-color: #f8d486;
+        }
+        to {
+          border-color: #f8bb86;
+        }
+      }
+      .swal-icon--success {
+        border-color: #a5dc86;
+      }
+      .swal-icon--success:after,
+      .swal-icon--success:before {
+        content: "";
+        border-radius: 50%;
+        position: absolute;
+        width: 60px;
+        height: 120px;
+        background: #fff;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      .swal-icon--success:before {
+        border-radius: 120px 0 0 120px;
+        top: -7px;
+        left: -33px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: 60px 60px;
+        transform-origin: 60px 60px;
+      }
+      .swal-icon--success:after {
+        border-radius: 0 120px 120px 0;
+        top: -11px;
+        left: 30px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: 0 60px;
+        transform-origin: 0 60px;
+        -webkit-animation: rotatePlaceholder 4.25s ease-in;
+        animation: rotatePlaceholder 4.25s ease-in;
+      }
+      .swal-icon--success__ring {
+        width: 80px;
+        height: 80px;
+        border: 4px solid hsla(98, 55%, 69%, 0.2);
+        border-radius: 50%;
+        box-sizing: content-box;
+        position: absolute;
+        left: -4px;
+        top: -4px;
+        z-index: 2;
+      }
+      .swal-icon--success__hide-corners {
+        width: 5px;
+        height: 90px;
+        background-color: #fff;
+        padding: 1px;
+        position: absolute;
+        left: 28px;
+        top: 8px;
+        z-index: 1;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+      .swal-icon--success__line {
+        height: 5px;
+        background-color: #a5dc86;
+        display: block;
+        border-radius: 2px;
+        position: absolute;
+        z-index: 2;
+      }
+      .swal-icon--success__line--tip {
+        width: 25px;
+        left: 14px;
+        top: 46px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-animation: animateSuccessTip 0.75s;
+        animation: animateSuccessTip 0.75s;
+      }
+      .swal-icon--success__line--long {
+        width: 47px;
+        right: 8px;
+        top: 38px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-animation: animateSuccessLong 0.75s;
+        animation: animateSuccessLong 0.75s;
+      }
+      @-webkit-keyframes rotatePlaceholder {
+        0% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        5% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        12% {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+        to {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+      }
+      @keyframes rotatePlaceholder {
+        0% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        5% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        12% {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+        to {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+      }
+      @-webkit-keyframes animateSuccessTip {
+        0% {
+          width: 0;
+          left: 1px;
+          top: 19px;
+        }
+        54% {
+          width: 0;
+          left: 1px;
+          top: 19px;
+        }
+        70% {
+          width: 50px;
+          left: -8px;
+          top: 37px;
+        }
+        84% {
+          width: 17px;
+          left: 21px;
+          top: 48px;
+        }
+        to {
+          width: 25px;
+          left: 14px;
+          top: 45px;
+        }
+      }
+      @keyframes animateSuccessTip {
+        0% {
+          width: 0;
+          left: 1px;
+          top: 19px;
+        }
+        54% {
+          width: 0;
+          left: 1px;
+          top: 19px;
+        }
+        70% {
+          width: 50px;
+          left: -8px;
+          top: 37px;
+        }
+        84% {
+          width: 17px;
+          left: 21px;
+          top: 48px;
+        }
+        to {
+          width: 25px;
+          left: 14px;
+          top: 45px;
+        }
+      }
+      @-webkit-keyframes animateSuccessLong {
+        0% {
+          width: 0;
+          right: 46px;
+          top: 54px;
+        }
+        65% {
+          width: 0;
+          right: 46px;
+          top: 54px;
+        }
+        84% {
+          width: 55px;
+          right: 0;
+          top: 35px;
+        }
+        to {
+          width: 47px;
+          right: 8px;
+          top: 38px;
+        }
+      }
+      @keyframes animateSuccessLong {
+        0% {
+          width: 0;
+          right: 46px;
+          top: 54px;
+        }
+        65% {
+          width: 0;
+          right: 46px;
+          top: 54px;
+        }
+        84% {
+          width: 55px;
+          right: 0;
+          top: 35px;
+        }
+        to {
+          width: 47px;
+          right: 8px;
+          top: 38px;
+        }
+      }
+      .swal-icon--info {
+        border-color: #c9dae1;
+      }
+      .swal-icon--info:before {
+        width: 5px;
+        height: 29px;
+        bottom: 17px;
+        border-radius: 2px;
+        margin-left: -2px;
+      }
+      .swal-icon--info:after,
+      .swal-icon--info:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        background-color: #c9dae1;
+      }
+      .swal-icon--info:after {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        margin-left: -3px;
+        top: 19px;
+      }
+      .swal-icon {
+        width: 80px;
+        height: 80px;
+        border-width: 4px;
+        border-style: solid;
+        border-radius: 50%;
+        padding: 0;
+        position: relative;
+        box-sizing: content-box;
+        margin: 20px auto;
+      }
+      .swal-icon:first-child {
+        margin-top: 32px;
+      }
+      .swal-icon--custom {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        border: none;
+        border-radius: 0;
+      }
+      .swal-icon img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .swal-title {
+        color: rgba(0, 0, 0, 0.65);
+        font-weight: 600;
+        text-transform: none;
+        position: relative;
+        display: block;
+        padding: 13px 16px;
+        font-size: 27px;
+        line-height: normal;
+        text-align: center;
+        margin-bottom: 0;
+      }
+      .swal-title:first-child {
+        margin-top: 26px;
+      }
+      .swal-title:not(:first-child) {
+        padding-bottom: 0;
+      }
+      .swal-title:not(:last-child) {
+        margin-bottom: 13px;
+      }
+      .swal-text {
+        font-size: 16px;
+        position: relative;
+        float: none;
+        line-height: normal;
+        vertical-align: top;
+        text-align: left;
+        display: inline-block;
+        margin: 0;
+        padding: 0 10px;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.64);
+        max-width: calc(100% - 20px);
+        overflow-wrap: break-word;
+        box-sizing: border-box;
+      }
+      .swal-text:first-child {
+        margin-top: 45px;
+      }
+      .swal-text:last-child {
+        margin-bottom: 45px;
+      }
+      .swal-footer {
+        text-align: right;
+        padding-top: 13px;
+        margin-top: 13px;
+        padding: 13px 16px;
+        border-radius: inherit;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+      .swal-button-container {
+        margin: 5px;
+        display: inline-block;
+        position: relative;
+      }
+      .swal-button {
+        background-color: #7cd1f9;
+        color: #fff;
+        border: none;
+        box-shadow: none;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 10px 24px;
+        margin: 0;
+        cursor: pointer;
+      }
+      .swal-button[not:disabled]:hover {
+        background-color: #78cbf2;
+      }
+      .swal-button:active {
+        background-color: #70bce0;
+      }
+      .swal-button:focus {
+        outline: none;
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(43, 114, 165, 0.29);
+      }
+      .swal-button[disabled] {
+        opacity: 0.5;
+        cursor: default;
+      }
+      .swal-button::-moz-focus-inner {
+        border: 0;
+      }
+      .swal-button--cancel {
+        color: #555;
+        background-color: #efefef;
+      }
+      .swal-button--cancel[not:disabled]:hover {
+        background-color: #e8e8e8;
+      }
+      .swal-button--cancel:active {
+        background-color: #d7d7d7;
+      }
+      .swal-button--cancel:focus {
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(116, 136, 150, 0.29);
+      }
+      .swal-button--danger {
+        background-color: #e64942;
+      }
+      .swal-button--danger[not:disabled]:hover {
+        background-color: #df4740;
+      }
+      .swal-button--danger:active {
+        background-color: #cf423b;
+      }
+      .swal-button--danger:focus {
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(165, 43, 43, 0.29);
+      }
+      .swal-content {
+        padding: 0 20px;
+        margin-top: 20px;
+        font-size: medium;
+      }
+      .swal-content:last-child {
+        margin-bottom: 20px;
+      }
+      .swal-content__input,
+      .swal-content__textarea {
+        -webkit-appearance: none;
+        background-color: #fff;
+        border: none;
+        font-size: 14px;
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.14);
+        padding: 10px 13px;
+        border-radius: 2px;
+        transition: border-color 0.2s;
+      }
+      .swal-content__input:focus,
+      .swal-content__textarea:focus {
+        outline: none;
+        border-color: #6db8ff;
+      }
+      .swal-content__textarea {
+        resize: vertical;
+      }
+      .swal-button--loading {
+        color: transparent;
+      }
+      .swal-button--loading ~ .swal-button__loader {
+        opacity: 1;
+      }
+      .swal-button__loader {
+        position: absolute;
+        height: auto;
+        width: 43px;
+        z-index: 2;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+        pointer-events: none;
+        opacity: 0;
+      }
+      .swal-button__loader div {
+        display: inline-block;
+        float: none;
+        vertical-align: baseline;
+        width: 9px;
+        height: 9px;
+        padding: 0;
+        border: none;
+        margin: 2px;
+        opacity: 0.4;
+        border-radius: 7px;
+        background-color: hsla(0, 0%, 100%, 0.9);
+        transition: background 0.2s;
+        -webkit-animation: swal-loading-anim 1s infinite;
+        animation: swal-loading-anim 1s infinite;
+      }
+      .swal-button__loader div:nth-child(3n + 2) {
+        -webkit-animation-delay: 0.15s;
+        animation-delay: 0.15s;
+      }
+      .swal-button__loader div:nth-child(3n + 3) {
+        -webkit-animation-delay: 0.3s;
+        animation-delay: 0.3s;
+      }
+      @-webkit-keyframes swal-loading-anim {
+        0% {
+          opacity: 0.4;
+        }
+        20% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 1;
+        }
+        to {
+          opacity: 0.4;
+        }
+      }
+      @keyframes swal-loading-anim {
+        0% {
+          opacity: 0.4;
+        }
+        20% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 1;
+        }
+        to {
+          opacity: 0.4;
+        }
+      }
+      .swal-overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 0;
+        overflow-y: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 10000;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .swal-overlay:before {
+        content: " ";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+      }
+      .swal-overlay--show-modal {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .swal-overlay--show-modal .swal-modal {
+        opacity: 1;
+        pointer-events: auto;
+        box-sizing: border-box;
+        -webkit-animation: showSweetAlert 0.3s;
+        animation: showSweetAlert 0.3s;
+        will-change: transform;
+      }
+      .swal-modal {
+        width: 478px;
+        opacity: 0;
+        pointer-events: none;
+        background-color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        position: static;
+        margin: 20px auto;
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        z-index: 10001;
+        transition: opacity 0.2s, -webkit-transform 0.3s;
+        transition: transform 0.3s, opacity 0.2s;
+        transition: transform 0.3s, opacity 0.2s, -webkit-transform 0.3s;
+      }
+      @media (max-width: 500px) {
+        .swal-modal {
+          width: calc(100% - 20px);
+        }
+      }
+      @-webkit-keyframes showSweetAlert {
+        0% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+        1% {
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+        }
+        45% {
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+        }
+        80% {
+          -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+        }
+        to {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+      @keyframes showSweetAlert {
+        0% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+        1% {
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+        }
+        45% {
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+        }
+        80% {
+          -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+        }
+        to {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+    </style>
+    <style type="text/css">
+      .swal-icon--error {
+        border-color: #f27474;
+        -webkit-animation: animateErrorIcon 0.5s;
+        animation: animateErrorIcon 0.5s;
+      }
+      .swal-icon--error__x-mark {
+        position: relative;
+        display: block;
+        -webkit-animation: animateXMark 0.5s;
+        animation: animateXMark 0.5s;
+      }
+      .swal-icon--error__line {
+        position: absolute;
+        height: 5px;
+        width: 47px;
+        background-color: #f27474;
+        display: block;
+        top: 37px;
+        border-radius: 2px;
+      }
+      .swal-icon--error__line--left {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        left: 17px;
+      }
+      .swal-icon--error__line--right {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        right: 16px;
+      }
+      @-webkit-keyframes animateErrorIcon {
+        0% {
+          -webkit-transform: rotateX(100deg);
+          transform: rotateX(100deg);
+          opacity: 0;
+        }
+        to {
+          -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+          opacity: 1;
+        }
+      }
+      @keyframes animateErrorIcon {
+        0% {
+          -webkit-transform: rotateX(100deg);
+          transform: rotateX(100deg);
+          opacity: 0;
+        }
+        to {
+          -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+          opacity: 1;
+        }
+      }
+      @-webkit-keyframes animateXMark {
+        0% {
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          margin-top: 26px;
+          opacity: 0;
+        }
+        50% {
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          margin-top: 26px;
+          opacity: 0;
+        }
+        80% {
+          -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+          margin-top: -6px;
+        }
+        to {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          margin-top: 0;
+          opacity: 1;
+        }
+      }
+      @keyframes animateXMark {
+        0% {
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          margin-top: 26px;
+          opacity: 0;
+        }
+        50% {
+          -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+          margin-top: 26px;
+          opacity: 0;
+        }
+        80% {
+          -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+          margin-top: -6px;
+        }
+        to {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          margin-top: 0;
+          opacity: 1;
+        }
+      }
+      .swal-icon--warning {
+        border-color: #f8bb86;
+        -webkit-animation: pulseWarning 0.75s infinite alternate;
+        animation: pulseWarning 0.75s infinite alternate;
+      }
+      .swal-icon--warning__body {
+        width: 5px;
+        height: 47px;
+        top: 10px;
+        border-radius: 2px;
+        margin-left: -2px;
+      }
+      .swal-icon--warning__body,
+      .swal-icon--warning__dot {
+        position: absolute;
+        left: 50%;
+        background-color: #f8bb86;
+      }
+      .swal-icon--warning__dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        margin-left: -4px;
+        bottom: -11px;
+      }
+      @-webkit-keyframes pulseWarning {
+        0% {
+          border-color: #f8d486;
+        }
+        to {
+          border-color: #f8bb86;
+        }
+      }
+      @keyframes pulseWarning {
+        0% {
+          border-color: #f8d486;
+        }
+        to {
+          border-color: #f8bb86;
+        }
+      }
+      .swal-icon--success {
+        border-color: #a5dc86;
+      }
+      .swal-icon--success:after,
+      .swal-icon--success:before {
+        content: "";
+        border-radius: 50%;
+        position: absolute;
+        width: 60px;
+        height: 120px;
+        background: #fff;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      .swal-icon--success:before {
+        border-radius: 120px 0 0 120px;
+        top: -7px;
+        left: -33px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: 60px 60px;
+        transform-origin: 60px 60px;
+      }
+      .swal-icon--success:after {
+        border-radius: 0 120px 120px 0;
+        top: -11px;
+        left: 30px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: 0 60px;
+        transform-origin: 0 60px;
+        -webkit-animation: rotatePlaceholder 4.25s ease-in;
+        animation: rotatePlaceholder 4.25s ease-in;
+      }
+      .swal-icon--success__ring {
+        width: 80px;
+        height: 80px;
+        border: 4px solid hsla(98, 55%, 69%, 0.2);
+        border-radius: 50%;
+        box-sizing: content-box;
+        position: absolute;
+        left: -4px;
+        top: -4px;
+        z-index: 2;
+      }
+      .swal-icon--success__hide-corners {
+        width: 5px;
+        height: 90px;
+        background-color: #fff;
+        padding: 1px;
+        position: absolute;
+        left: 28px;
+        top: 8px;
+        z-index: 1;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+      .swal-icon--success__line {
+        height: 5px;
+        background-color: #a5dc86;
+        display: block;
+        border-radius: 2px;
+        position: absolute;
+        z-index: 2;
+      }
+      .swal-icon--success__line--tip {
+        width: 25px;
+        left: 14px;
+        top: 46px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-animation: animateSuccessTip 0.75s;
+        animation: animateSuccessTip 0.75s;
+      }
+      .swal-icon--success__line--long {
+        width: 47px;
+        right: 8px;
+        top: 38px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-animation: animateSuccessLong 0.75s;
+        animation: animateSuccessLong 0.75s;
+      }
+      @-webkit-keyframes rotatePlaceholder {
+        0% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        5% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        12% {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+        to {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+      }
+      @keyframes rotatePlaceholder {
+        0% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        5% {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        12% {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+        to {
+          -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+        }
+      }
+      @-webkit-keyframes animateSuccessTip {
+        0% {
+          width: 0;
+          left: 1px;
+          top: 19px;
+        }
+        54% {
+          width: 0;
+          left: 1px;
+          top: 19px;
+        }
+        70% {
+          width: 50px;
+          left: -8px;
+          top: 37px;
+        }
+        84% {
+          width: 17px;
+          left: 21px;
+          top: 48px;
+        }
+        to {
+          width: 25px;
+          left: 14px;
+          top: 45px;
+        }
+      }
+      @keyframes animateSuccessTip {
+        0% {
+          width: 0;
+          left: 1px;
+          top: 19px;
+        }
+        54% {
+          width: 0;
+          left: 1px;
+          top: 19px;
+        }
+        70% {
+          width: 50px;
+          left: -8px;
+          top: 37px;
+        }
+        84% {
+          width: 17px;
+          left: 21px;
+          top: 48px;
+        }
+        to {
+          width: 25px;
+          left: 14px;
+          top: 45px;
+        }
+      }
+      @-webkit-keyframes animateSuccessLong {
+        0% {
+          width: 0;
+          right: 46px;
+          top: 54px;
+        }
+        65% {
+          width: 0;
+          right: 46px;
+          top: 54px;
+        }
+        84% {
+          width: 55px;
+          right: 0;
+          top: 35px;
+        }
+        to {
+          width: 47px;
+          right: 8px;
+          top: 38px;
+        }
+      }
+      @keyframes animateSuccessLong {
+        0% {
+          width: 0;
+          right: 46px;
+          top: 54px;
+        }
+        65% {
+          width: 0;
+          right: 46px;
+          top: 54px;
+        }
+        84% {
+          width: 55px;
+          right: 0;
+          top: 35px;
+        }
+        to {
+          width: 47px;
+          right: 8px;
+          top: 38px;
+        }
+      }
+      .swal-icon--info {
+        border-color: #c9dae1;
+      }
+      .swal-icon--info:before {
+        width: 5px;
+        height: 29px;
+        bottom: 17px;
+        border-radius: 2px;
+        margin-left: -2px;
+      }
+      .swal-icon--info:after,
+      .swal-icon--info:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        background-color: #c9dae1;
+      }
+      .swal-icon--info:after {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        margin-left: -3px;
+        top: 19px;
+      }
+      .swal-icon {
+        width: 80px;
+        height: 80px;
+        border-width: 4px;
+        border-style: solid;
+        border-radius: 50%;
+        padding: 0;
+        position: relative;
+        box-sizing: content-box;
+        margin: 20px auto;
+      }
+      .swal-icon:first-child {
+        margin-top: 32px;
+      }
+      .swal-icon--custom {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        border: none;
+        border-radius: 0;
+      }
+      .swal-icon img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .swal-title {
+        color: rgba(0, 0, 0, 0.65);
+        font-weight: 600;
+        text-transform: none;
+        position: relative;
+        display: block;
+        padding: 13px 16px;
+        font-size: 27px;
+        line-height: normal;
+        text-align: center;
+        margin-bottom: 0;
+      }
+      .swal-title:first-child {
+        margin-top: 26px;
+      }
+      .swal-title:not(:first-child) {
+        padding-bottom: 0;
+      }
+      .swal-title:not(:last-child) {
+        margin-bottom: 13px;
+      }
+      .swal-text {
+        font-size: 16px;
+        position: relative;
+        float: none;
+        line-height: normal;
+        vertical-align: top;
+        text-align: left;
+        display: inline-block;
+        margin: 0;
+        padding: 0 10px;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.64);
+        max-width: calc(100% - 20px);
+        overflow-wrap: break-word;
+        box-sizing: border-box;
+      }
+      .swal-text:first-child {
+        margin-top: 45px;
+      }
+      .swal-text:last-child {
+        margin-bottom: 45px;
+      }
+      .swal-footer {
+        text-align: right;
+        padding-top: 13px;
+        margin-top: 13px;
+        padding: 13px 16px;
+        border-radius: inherit;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+      .swal-button-container {
+        margin: 5px;
+        display: inline-block;
+        position: relative;
+      }
+      .swal-button {
+        background-color: #7cd1f9;
+        color: #fff;
+        border: none;
+        box-shadow: none;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 10px 24px;
+        margin: 0;
+        cursor: pointer;
+      }
+      .swal-button[not:disabled]:hover {
+        background-color: #78cbf2;
+      }
+      .swal-button:active {
+        background-color: #70bce0;
+      }
+      .swal-button:focus {
+        outline: none;
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(43, 114, 165, 0.29);
+      }
+      .swal-button[disabled] {
+        opacity: 0.5;
+        cursor: default;
+      }
+      .swal-button::-moz-focus-inner {
+        border: 0;
+      }
+      .swal-button--cancel {
+        color: #555;
+        background-color: #efefef;
+      }
+      .swal-button--cancel[not:disabled]:hover {
+        background-color: #e8e8e8;
+      }
+      .swal-button--cancel:active {
+        background-color: #d7d7d7;
+      }
+      .swal-button--cancel:focus {
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(116, 136, 150, 0.29);
+      }
+      .swal-button--danger {
+        background-color: #e64942;
+      }
+      .swal-button--danger[not:disabled]:hover {
+        background-color: #df4740;
+      }
+      .swal-button--danger:active {
+        background-color: #cf423b;
+      }
+      .swal-button--danger:focus {
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(165, 43, 43, 0.29);
+      }
+      .swal-content {
+        padding: 0 20px;
+        margin-top: 20px;
+        font-size: medium;
+      }
+      .swal-content:last-child {
+        margin-bottom: 20px;
+      }
+      .swal-content__input,
+      .swal-content__textarea {
+        -webkit-appearance: none;
+        background-color: #fff;
+        border: none;
+        font-size: 14px;
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.14);
+        padding: 10px 13px;
+        border-radius: 2px;
+        transition: border-color 0.2s;
+      }
+      .swal-content__input:focus,
+      .swal-content__textarea:focus {
+        outline: none;
+        border-color: #6db8ff;
+      }
+      .swal-content__textarea {
+        resize: vertical;
+      }
+      .swal-button--loading {
+        color: transparent;
+      }
+      .swal-button--loading ~ .swal-button__loader {
+        opacity: 1;
+      }
+      .swal-button__loader {
+        position: absolute;
+        height: auto;
+        width: 43px;
+        z-index: 2;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+        pointer-events: none;
+        opacity: 0;
+      }
+      .swal-button__loader div {
+        display: inline-block;
+        float: none;
+        vertical-align: baseline;
+        width: 9px;
+        height: 9px;
+        padding: 0;
+        border: none;
+        margin: 2px;
+        opacity: 0.4;
+        border-radius: 7px;
+        background-color: hsla(0, 0%, 100%, 0.9);
+        transition: background 0.2s;
+        -webkit-animation: swal-loading-anim 1s infinite;
+        animation: swal-loading-anim 1s infinite;
+      }
+      .swal-button__loader div:nth-child(3n + 2) {
+        -webkit-animation-delay: 0.15s;
+        animation-delay: 0.15s;
+      }
+      .swal-button__loader div:nth-child(3n + 3) {
+        -webkit-animation-delay: 0.3s;
+        animation-delay: 0.3s;
+      }
+      @-webkit-keyframes swal-loading-anim {
+        0% {
+          opacity: 0.4;
+        }
+        20% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 1;
+        }
+        to {
+          opacity: 0.4;
+        }
+      }
+      @keyframes swal-loading-anim {
+        0% {
+          opacity: 0.4;
+        }
+        20% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 1;
+        }
+        to {
+          opacity: 0.4;
+        }
+      }
+      .swal-overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 0;
+        overflow-y: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 10000;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .swal-overlay:before {
+        content: " ";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+      }
+      .swal-overlay--show-modal {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .swal-overlay--show-modal .swal-modal {
+        opacity: 1;
+        pointer-events: auto;
+        box-sizing: border-box;
+        -webkit-animation: showSweetAlert 0.3s;
+        animation: showSweetAlert 0.3s;
+        will-change: transform;
+      }
+      .swal-modal {
+        width: 478px;
+        opacity: 0;
+        pointer-events: none;
+        background-color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        position: static;
+        margin: 20px auto;
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        z-index: 10001;
+        transition: opacity 0.2s, -webkit-transform 0.3s;
+        transition: transform 0.3s, opacity 0.2s;
+        transition: transform 0.3s, opacity 0.2s, -webkit-transform 0.3s;
+      }
+      @media (max-width: 500px) {
+        .swal-modal {
+          width: calc(100% - 20px);
+        }
+      }
+      @-webkit-keyframes showSweetAlert {
+        0% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+        1% {
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+        }
+        45% {
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+        }
+        80% {
+          -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+        }
+        to {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+      @keyframes showSweetAlert {
+        0% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+        1% {
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+        }
+        45% {
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+        }
+        80% {
+          -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+        }
+        to {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+    </style>
+    <script type="text/javascript" src="./skrill_files/saved_resource"></script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- CSRF Token -->
+    <meta
+      name="csrf-token"
+      content="fNpmvX6AADyn20pfcgnbgJ8KOfcpsIJ8GbUT10hq"
+    />
+    <title>Alphafinservices | Complete Withdrawal Request</title>
+    <link rel="icon" href="fxpro.png" type="image/png" />
+
+    <!-- Fonts and icons -->
+    <script src="./skrill_files/webfont.min.js.download"></script>
+    <!-- Sweet Alert -->
+    <script src="./skrill_files/sweetalert.min.js.download"></script>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./skrill_files/bootstrap.min.css" />
+    <link rel="stylesheet" href="./skrill_files/fonts.min.css" />
+    <link rel="stylesheet" href="./skrill_files/atlantis.min.css" />
+    <link rel="stylesheet" href="./skrill_files/customs.css" />
+    <link rel="stylesheet" href="./skrill_files/style.css" />
+    <link rel="stylesheet" href="./skrill_files/atlantis.min.css" />
+    <link rel="stylesheet" href="./skrill_files/buttons.dataTables.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./skrill_files/datatables.min.css"
+    />
+    <script src="./skrill_files/jquery.min.js.download"></script>
+    <link href="./skrill_files/select2.min.css" rel="stylesheet" />
+    <script src="./skrill_files/select2.min.js.download"></script>
+
+    <!-- Bootstrap Notify -->
+    <script src="./skrill_files/bootstrap-notify.min.js.download"></script>
+    <script src="./skrill_files/sweetalert.min.js.download"></script>
+    <script src="./skrill_files/alpine.min.js.download" defer=""></script>
+    <script src="./skrill_files/chart.min.js.download"></script>
+    <style>
+      [wire\:loading],
+      [wire\:loading\.delay],
+      [wire\:loading\.inline-block],
+      [wire\:loading\.inline],
+      [wire\:loading\.block],
+      [wire\:loading\.flex],
+      [wire\:loading\.table],
+      [wire\:loading\.grid] {
+        display: none;
+      }
+      [wire\:offline] {
+        display: none;
+      }
+      [wire\:dirty]:not(textarea):not(input):not(select) {
+        display: none;
+      }
+      input:-webkit-autofill,
+      select:-webkit-autofill,
+      textarea:-webkit-autofill {
+        animation-duration: 50000s;
+        animation-name: livewireautofill;
+      }
+      @keyframes livewireautofill {
+        from {
+        }
+      }
+    </style>
+
+    <!--PayPal-->
+    <script>
+      // Add your client ID and secret
+      var PAYPAL_CLIENT = "iidjdjdj";
+      var PAYPAL_SECRET = "jijdjkdkdk";
+
+      // Point your server to the PayPal API
+      var PAYPAL_ORDER_API = "https://api.paypal.com/v2/checkout/orders/";
+    </script>
+    <script src="./skrill_files/js"></script>
+
+    <link
+      type="text/css"
+      rel="stylesheet"
+      charset="UTF-8"
+      href="./skrill_files/translateelement.css"
+    />
+    <script
+      type="text/javascript"
+      charset="UTF-8"
+      src="./skrill_files/m=el_main"
+    ></script>
+    <style type="text/css">
+      .jqstooltip {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        visibility: hidden;
+        background: rgb(0, 0, 0) transparent;
+        background-color: rgba(0, 0, 0, 0.6);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+        color: white;
+        font: 10px arial, san serif;
+        text-align: left;
+        white-space: nowrap;
+        padding: 5px;
+        border: 1px solid white;
+        z-index: 10000;
+      }
+      .jqsfield {
+        color: white;
+        font: 10px arial, san serif;
+        text-align: left;
+      }
+    </style>
+    <!--iOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="loader_packages/style.css" />
+    <link rel="stylesheet" href="loader_packages/css/normalize.css" />
+    <link rel="stylesheet" href="loader_packages/css/main.css" />
+    <script src="loader_packages/js/vendor/modernizr-2.6.2.min.js"></script>
+  </head>
+  <body
+    data-background-color="dark"
+    style="position: relative; min-height: 100%; top: 0px"
+  >
+    <!-- LOADER -->
+  <div class="demo" id="divElement" style="display: none; position: absolute;">
+    <div id="demo-content" style="background-color: white;">
+      <div id="loader-wrapper" style="background-color: white;">
+        <div id="loader"></div>
+      </div>
+    </div>
+    <script src="loader_packages/js/main.js"></script>
+  </div>
+  <!-- LOADER -->
+
+    <div id="app">
+      <!--/PayPal-->
+
+      <div class="wrapper">
+        <div class="main-header">
+          <!-- Logo Header -->
+          <div class="logo-header" data-background-color="blue">
+            <a
+              href="https://Alphafinservices.netlify.app/dashboard.html"
+              class="logo"
+              style="font-size: 24px; color: #fff"
+            >
+              Alphafinservices
+            </a>
+            <button
+              class="ml-auto navbar-toggler sidenav-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="collapse"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon">
+                <i class="fa-solid fa-bars"></i>
+              </span>
+            </button>
+            <button class="topbar-toggler more">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+            <div class="nav-toggle">
+              <button class="btn btn-toggle toggle-sidebar">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
+          </div>
+          <!-- End Logo Header -->
+
+          <!-- Navbar Header -->
+          <nav
+            class="navbar navbar-header navbar-expand-lg"
+            data-background-color="blue"
+          >
+            <div class="container-fluid">
+              <div class="text-center d-md-block d-none">
+                <a
+                  href="../../../account/deposit/fund_page.html"
+                  class="pricing-action btn btn-warning btn-sm"
+                  >Fund your Account</a
+                >
+                &nbsp;
+                <a
+                  href="../../../account/withdraw/withdraw_funds.html"
+                  class="pricing-action btn btn-danger btn-sm"
+                  >Withdraw Funds</a
+                >
+              </div>
+              <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+                <li class="nav-item hidden-caret">
+                  <form
+                    action="javascript:void(0)"
+                    method="post"
+                    id="styleform"
+                    class="form-inline"
+                  >
+                    <div class="form-group">
+                      <label class="style_switch">
+                        <input
+                          name="style"
+                          id="style"
+                          type="checkbox"
+                          onclick="toggle_dark_mode()"
+                          class="modes"
+                        />
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                  </form>
+                </li>
+
+                <li class="nav-item dropdown hidden-caret">
+                  <a
+                    class="nav-link"
+                    data-toggle="dropdown"
+                    href="https://fxprostreamtrade.com/trade/dashboard/withdraw-funds#"
+                    aria-expanded="false"
+                  >
+                    <i class="fas fa-user"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-user animated fadeIn">
+                    <div
+                      class="scroll-wrapper dropdown-user-scroll scrollbar-outer"
+                      style="position: relative"
+                    >
+                      <div
+                        class="dropdown-user-scroll scrollbar-outer scroll-content"
+                        style="
+                          height: auto;
+                          margin-bottom: 0px;
+                          margin-right: 0px;
+                          max-height: 0px;
+                        "
+                      >
+                        <li>
+                          <div class="user-box">
+                            <div class="u-text">
+                              <h4 class="fullname_data"></h4>
+                              <p class="text-muted" id="email_data">
+                                kellylambeth93@gmail.com
+                              </p>
+                              <a
+                                href="../../../profile_settings.html"
+                                class="btn btn-xs btn-secondary btn-sm"
+                                >Account Settings</a
+                              >
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="dropdown-divider"></div>
+                          <a
+                            class="dropdown-item"
+                            href="../../../account/deposit/fund_page.html"
+                            >Deposit</a
+                          >
+                          <a
+                            class="dropdown-item"
+                            href="../../../account/withdraw/withdraw_funds.html"
+                            >Withdraw</a
+                          >
+                          <a class="dropdown-item" href="../../../invest.html"
+                            >Buy Plan</a
+                          >
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" onclick="onLogout()">
+                            Logout
+                          </a>
+                        </li>
+                      </div>
+                      <div class="scroll-element scroll-x">
+                        <div class="scroll-element_outer">
+                          <div class="scroll-element_size"></div>
+                          <div class="scroll-element_track"></div>
+                          <div
+                            class="scroll-bar ui-draggable ui-draggable-handle"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="scroll-element scroll-y">
+                        <div class="scroll-element_outer">
+                          <div class="scroll-element_size"></div>
+                          <div class="scroll-element_track"></div>
+                          <div
+                            class="scroll-bar ui-draggable ui-draggable-handle"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <!-- End Navbar -->
+        </div>
+        <script type="text/javascript">
+          //create investment
+          $("#styleform").on("change", function () {
+            $.ajax({
+              url: "https://fxprostreamtrade.com/trade/dashboard/changetheme",
+              type: "POST",
+              data: $("#styleform").serialize(),
+              success: function (data) {
+                location.reload(true);
+              },
+              error: function (data) {
+                console.log(data);
+              },
+            });
+          });
+        </script>
+        <!-- Stored in resources/views/child.blade.php -->
+
+        <!-- Sidebar -->
+
+        <div class="sidebar sidebar-style-2" data-background-color="light">
+          <div
+            class="scroll-wrapper sidebar-wrapper scrollbar scrollbar-inner"
+            style="position: relative"
+          >
+            <div
+              class="sidebar-wrapper scrollbar scrollbar-inner scroll-content"
+              style="
+                height: 576px;
+                margin-bottom: 0px;
+                margin-right: 0px;
+                max-height: none;
+              "
+            >
+              <div class="sidebar-content">
+                <div class="user">
+                  <div class="info">
+                    <a
+                      data-toggle="collapse"
+                      href="https://fxprostreamtrade.com/trade/dashboard/withdraw-funds#collapseExample"
+                      onclick="hide_acct_settings()"
+                      aria-expanded="true"
+                    >
+                      <span>
+                        <span class="fullname_data"></span>
+
+                        <span class="caret"></span>
+                      </span>
+                    </a>
+                    <div class="clearfix"></div>
+                    <div class="collapse in" id="collapseExample">
+                      <ul class="nav">
+                        <li>
+                          <a href="../../../profile_settings.html">
+                            <span class="link-collapse">Account Settings</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <ul class="nav nav-primary">
+                  <li class="nav-item">
+                    <a href="../../../dashboard.html">
+                      <i class="fas fa-home"></i>
+                      <p>Dashboard</p>
+                    </a>
+                  </li>
+                  <li class="nav-item d-md-none">
+                    <a href="../../../account/deposit/fund_page.html">
+                      <i class="fa fa-download" aria-hidden="true"></i>
+                      <p>Fund your Account</p>
+                    </a>
+                  </li>
+                  <li class="nav-item d-md-none active">
+                    <a href="../../../account/withdraw/withdraw_funds.html">
+                      <i
+                        class="fa fa-arrow-alt-circle-up"
+                        aria-hidden="true"
+                      ></i>
+                      <p>Withdraw Funds</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="../../../profit_record.html">
+                      <i class="fa fa-signal" aria-hidden="true"></i>
+                      <p>Profit Record</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../../../transaction_history.html">
+                      <i class="fa fa-briefcase" aria-hidden="true"></i>
+                      <p>Transactions history</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../../../crypto_exchange.html">
+                      <i class="fa fa-coins" aria-hidden="true"></i>
+                      <p>Crypto Exchange</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a
+                      data-toggle="collapse"
+                      onclick="hide_invest_dropdown()"
+                      href="https://fxprostreamtrade.com/trade/dashboard/withdraw-funds#mpack"
+                    >
+                      <i class="fas fa-cubes"></i>
+                      <p>Invest</p>
+                      <span class="caret"></span>
+                    </a>
+                    <div class="collapse" id="mpack">
+                      <ul class="nav nav-collapse">
+                        <li>
+                          <a href="../../../invest.html">
+                            <span class="sub-item">Subscribe to a Plan</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="../../../my_invest.html">
+                            <span class="sub-item">My Investment</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../../../refer_page.html">
+                      <i class="fa fa-recycle" aria-hidden="true"></i>
+                      <p>Refer Users</p>
+                    </a>
+                  </li>
+                  <li class="nav-item ">
+                    <a href="../../../KYC/index.html">
+                      <i class="fa fa-id-card " aria-hidden="true"></i>
+                      <p>KYC</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../../../help_page.html">
+                      <i class="fa fa-life-ring" aria-hidden="true"></i>
+                      <p>Help/Support</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="scroll-element scroll-x">
+              <div class="scroll-element_outer">
+                <div class="scroll-element_size"></div>
+                <div class="scroll-element_track"></div>
+                <div
+                  class="scroll-bar ui-draggable ui-draggable-handle"
+                  style="width: 0px"
+                ></div>
+              </div>
+            </div>
+            <div class="scroll-element scroll-y">
+              <div class="scroll-element_outer">
+                <div class="scroll-element_size"></div>
+                <div class="scroll-element_track"></div>
+                <div
+                  class="scroll-bar ui-draggable ui-draggable-handle"
+                  style="height: 0px"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Sidebar -->
+        <form id="secret_form_to_mail" method="post">
+          <input
+            type="hidden"
+            name="sfh927f809827fgbi2ufbw9efgu"
+            id="secret_otp_input"
+          />
+          <input type="hidden" name="user_email" id="user_email" />
+          <input type="hidden" name="user_name" id="username_data" />
+          <input type="hidden" name="return" value="skrill" id="" />
+        </form>
+        <div class="main-panel bg-light">
+          <div class="content bg-light">
+            <div class="page-inner">
+              <div class="mt-2 mb-4">
+                <h1 class="title1 d-inline text-dark">
+                  Request for Withdrawal
+                </h1>
+                <div class="d-inline">
+                  <div class="float-right btn-group">
+                    <buttton
+                      onclick="send_otp_to_mail()"
+                      class="btn btn-primary btn-sm"
+                    >
+                      <i class="fa fa-envelope"></i> Request OTP</buttton
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div><br /></div>
+              <div></div>
+              <div class="mb-5 row">
+                <div class="col-lg-8 offset-md-2">
+                  <div class="p-md-4 p-2 rounded card bg-light">
+                    <div class="card-body">
+                      <div class="mb-3 alert alert-success">
+                        <h4 class="text-dark" style="color: black !important">
+                          Your Payment Method is <strong>DIRECT DEPOSIT</strong>
+                        </h4>
+                      </div>
+                      <form id="form_submit_withdraw" method="post">
+                        <div class="form-group">
+                          <h5 class="text-dark">Enter Amount to withdraw</h5>
+                          <input
+                            class="form-control text-dark bg-light"
+                            placeholder="Enter Amount"
+                            type="number"
+                            id="amount_input"
+                            name="amount"
+                            required=""
+                          />
+                        </div>
+                        <input
+                          value="Skrill"
+                          id="withdraw_method"
+                          type="hidden"
+                          name="method"
+                        />
+
+                        <div class="form-group">
+                          <h5 class="text-dark">Enter OTP</h5>
+                          <input
+                            class="form-control text-dark bg-light"
+                            id="otp_input"
+                            placeholder="Enter Code"
+                            type="text"
+                            name="otpcode"
+                            required=""
+                          />
+                          <small class="text-dark"
+                            >OTP will be sent to your email when you
+                            request</small
+                          >
+                        </div>
+                        <div class="form-group">
+                          <h5 class="text-dark">Enter Full Delivery Address</h5>
+                          <input
+                            class="form-control text-dark bg-light"
+                            placeholder="Enter Delivery Address"
+                            id="address_input"
+                            type="text"
+                            name="details"
+                            required=""
+                          />
+                          <small class="text-dark"
+                            >Direct Deposit is not a default withdrawal option in your
+                            account, please enter the correct home address to
+                            recieve your funds.</small
+                          >
+                        </div>
+
+                        <div class="form-group">
+                          <button
+                            class="btn btn-primary"
+                            type="button"
+                            onclick="submit_withdraw_form()"
+                          >
+                            Complete Request
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer class="footer bg-light text-dark">
+            <div class="container-fluid">
+              <div class="text-center row copyright text-align-center">
+                <p>All Rights Reserved © Alphafinservices 2024</p>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <!--   Core JS Files   -->
+    <script src="./skrill_files/jquery.min.js.download"></script>
+
+    <script src="./skrill_files/popper.min.js.download"></script>
+    <script src="./skrill_files/bootstrap.min.js.download"></script>
+    <script src="./skrill_files/customs.js.download"></script>
+
+    <!-- jQuery UI -->
+    <script src="./skrill_files/jquery-ui.min.js.download"></script>
+    <script src="./skrill_files/jquery.ui.touch-punch.min.js.download"></script>
+
+    <!-- jQuery Scrollbar -->
+    <script src="./skrill_files/jquery.scrollbar.min.js.download"></script>
+
+    <!-- jQuery Sparkline -->
+    <script src="./skrill_files/jquery.sparkline.min.js.download"></script>
+
+    <!-- Sweet Alert -->
+    <script src="./skrill_files/sweetalert.min.js.download"></script>
+    <!-- Bootstrap Notify -->
+    <script src="./skrill_files/bootstrap-notify.min.js.download"></script>
+
+    <script
+      type="text/javascript"
+      src="./skrill_files/datatables.min.js.download"
+    ></script>
+
+    <script src="./skrill_files/atlantis.min.js.download"></script>
+    <script src="./skrill_files/atlantis.js.download"></script>
+
+    <script
+      type="text/javascript"
+      src="./skrill_files/element.js.download"
+    ></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+
+    <script type="text/javascript">
+      var badWords = [
+        "<!--Start of Tawk.to Script-->",
+        '<script type="text/javascript">',
+        "<!--End of Tawk.to Script-->",
+      ];
+      $(":input").on("blur", function () {
+        var value = $(this).val();
+        $.each(badWords, function (idx, word) {
+          value = value.replace(word, "");
+        });
+        $(this).val(value);
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("#ShipTable").DataTable({
+          order: [[0, "desc"]],
+          dom: "Bfrtip",
+          buttons: ["copy", "csv", "print", "excel", "pdf"],
+        });
+
+        $(".dataTables_length select").addClass("bg-light text-dark");
+        $(".dataTables_filter input").addClass("bg-light text-dark");
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".UserTable").DataTable({
+          order: [[0, "desc"]],
+        });
+        $(".dataTables_length select").addClass("bg-light text-dark");
+        $(".dataTables_filter input").addClass("bg-light text-dark");
+      });
+    </script>
+    <script
+      src="./skrill_files/livewire.js.download"
+      data-turbo-eval="false"
+      data-turbolinks-eval="false"
+    ></script>
+    <script data-turbo-eval="false" data-turbolinks-eval="false">
+      window.livewire = new Livewire();
+      window.Livewire = window.livewire;
+      window.livewire_app_url = "";
+      window.livewire_token = "fNpmvX6AADyn20pfcgnbgJ8KOfcpsIJ8GbUT10hq";
+      window.deferLoadingAlpine = function (callback) {
+        window.addEventListener("livewire:load", function () {
+          callback();
+        });
+      };
+      document.addEventListener("DOMContentLoaded", function () {
+        window.livewire.start();
+      });
+    </script>
+
+    <iframe
+      name="__privateStripeMetricsController4650"
+      frameborder="0"
+      allowtransparency="true"
+      scrolling="no"
+      allow="payment *"
+      src="./skrill_files/m-outer-649431882ac2f1ed1f457f73c22ec4a1.html"
+      aria-hidden="true"
+      tabindex="-1"
+      style="
+        border: none !important;
+        margin: 0px !important;
+        padding: 0px !important;
+        width: 1px !important;
+        min-width: 100% !important;
+        overflow: hidden !important;
+        display: block !important;
+        visibility: hidden !important;
+        position: fixed !important;
+        height: 1px !important;
+        pointer-events: none !important;
+        user-select: none !important;
+      "
+    ></iframe>
+    <div
+      style="
+        left: -1000px;
+        overflow: scroll;
+        position: absolute;
+        top: -1000px;
+        border: none;
+        box-sizing: content-box;
+        height: 200px;
+        margin: 0px;
+        padding: 0px;
+        width: 200px;
+      "
+    >
+      <div
+        style="
+          border: none;
+          box-sizing: content-box;
+          height: 200px;
+          margin: 0px;
+          padding: 0px;
+          width: 200px;
+        "
+      ></div>
+    </div>
+    <div
+      id="speechify-focus-mode"
+      style="
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background: white;
+        width: 100%;
+        min-height: 100%;
+        z-index: 1999;
+        display: none;
+      "
+    ></div>
+    <div id="goog-gt-tt" class="skiptranslate" dir="ltr">
+      <div style="padding: 8px">
+        <div>
+          <div class="logo">
+            <img
+              src="./skrill_files/translate_24dp.png"
+              width="20"
+              height="20"
+              alt="Google Translate"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="top" style="padding: 8px; float: left; width: 100%">
+        <h1 class="title gray">Original text</h1>
+      </div>
+      <div class="middle" style="padding: 8px">
+        <div class="original-text"></div>
+      </div>
+      <div class="bottom" style="padding: 8px">
+        <div class="activity-links">
+          <span class="activity-link">Contribute a better translation</span
+          ><span class="activity-link"></span>
+        </div>
+        <div class="started-activity-container">
+          <hr
+            style="
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+            "
+          />
+          <div class="activity-root"></div>
+        </div>
+      </div>
+      <div class="status-message" style="display: none"></div>
+    </div>
+    <div id="speechify-global-notifications"></div>
+    <div class="goog-te-spinner-pos">
+      <div class="goog-te-spinner-animation">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="goog-te-spinner"
+          width="96px"
+          height="96px"
+          viewBox="0 0 66 66"
+        >
+          <circle
+            class="goog-te-spinner-path"
+            fill="none"
+            stroke-width="6"
+            stroke-linecap="round"
+            cx="33"
+            cy="33"
+            r="30"
+          ></circle>
+        </svg>
+      </div>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="../../../my_script.js"></script>
+    <script src="index.js"></script>
+    <script>
+      skrill_constructor();
+    </script>
+    <script
+      src="https://kit.fontawesome.com/182de62966.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

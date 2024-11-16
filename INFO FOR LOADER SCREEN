@@ -1,0 +1,16 @@
+<!-- LOADER -->
+<div class="demo" id="divElement" style="display: block; position: absolute;">
+    <div id="demo-content" style="background-color: white;">
+        <div id="loader-wrapper" style="background-color: white;">
+            <div id="loader"></div>
+        </div>
+    </div>
+    <script src="loader_packages/js/main.js"></script>
+</div>
+<!-- LOADER -->
+
+<script>
+    window.onload = function () {
+        document.getElementById("divElement").style.display = "none";
+    }
+</script>

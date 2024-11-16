@@ -1,0 +1,13 @@
+swal({
+    title: "Notification",
+    text: "You do not have a package at the moment",
+    icon: "warning",
+})
+.then((willDelete) => {
+    window.location = "account/deposit/fund_page.html";
+});
+
+swal("Notification","You do not have a package at the moment","warning")
+          .then((willDelete) => {
+            window.location = "account/deposit/fund_page.html";
+          });
