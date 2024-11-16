@@ -5,6 +5,7 @@ set_previous_data_before_reload();
 
 function send_otp_to_mail() {
   //swal("Notification", "code sent!", "success");
+  console.log("here")
   var otp_code = generate_otp(),
     send_to = user_details_holder.email;
   localStorage.setItem("otp_code", otp_code);
@@ -15,12 +16,13 @@ function send_otp_to_mail() {
     msg: otp_code,
     name: user_details_holder.user_settings.personal_settings.full_name
   };
-
   var temp = JSON.stringify(data);
+  var baseUrl = window.location.origin; // Get the base URL (protocol + domain + port)
+  var withdrawalUrl = baseUrl + "/stock/auth/php/withdrawal.php"; // Absolute URL
   $.ajax({
     type: "post",
     dataType: "json",
-    url: "../../../auth/php/withdrawal.php",
+    url: withdrawalUrl,
     data: { data: temp }, // stringyfy before passing
     success: function (status) {
       console.log(status);
@@ -312,5 +314,5 @@ function check_otp_code() {
 }
 function generate_otp() {
   let rand_numb = Math.floor(Math.random() * (999998 - 100000 + 1)) + 100000;
-  return rand_numb;
+  return rand_numb+"";
 }

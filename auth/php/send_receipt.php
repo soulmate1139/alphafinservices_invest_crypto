@@ -36,16 +36,16 @@ try {
             // SMTP settings
             $mail->isSMTP();
             // $mail->SMTPDebug = 3;  // Uncomment for debugging
-            $mail->Host = "mail.alphafinservices.com"; // SMTP address of your email
-            $mail->SMTPAuth = false;
-            $mail->Username = "info@alphafinservices.com";
-            $mail->Password = ""; // SMTP password
-            $mail->Port = 465; // SMTP port
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Enable SSL encryption
+            $mail->Host = "smtp.gmail.com"; //"mail.alphafinservices.com"; // SMTP address of your email
+            $mail->SMTPAuth = true; //false;
+            $mail->Username = "wasiuabiola1106@gmail.com";
+            $mail->Password = "epap alis udgv hayq"; // SMTP password
+            $mail->Port = 587;////465; // SMTP port
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; //PHPMailer::ENCRYPTION_SMTPS; // Enable SSL encryption
 
             // Email settings
             $mail->isHTML(true);
-            $mail->setFrom("info@alphafinservices.com", "Alphafinservices Team");
+            $mail->setFrom("wasiuabiola1106@gmail.com", "Alphafinservices Team");
             $mail->Subject = $subject;
             $mail->Body = $body;
             $mail->addAddress($to);
