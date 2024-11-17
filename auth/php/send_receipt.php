@@ -8,6 +8,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 try {
+    include('config.php');
     // Check if the file 'proof' is uploaded
     if (isset($_FILES['proof'])) {
         $image = $_FILES['proof'];
@@ -36,16 +37,16 @@ try {
             // SMTP settings
             $mail->isSMTP();
             // $mail->SMTPDebug = 3;  // Uncomment for debugging
-            $mail->Host = "mail.gtsfastservice.com"; //"smtp.gmail.com"; //"mail.alphafinservices.com"; // SMTP address of your email
-            $mail->SMTPAuth = true; //true; //false;
-            $mail->Username = "test@gtsfastservice.com";
-            $mail->Password = ",!!C3Z@[OM#&"; // SMTP password
-            $mail->Port = 465; //587;////465; // SMTP port
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; //PHPMailer::ENCRYPTION_STARTTLS; //PHPMailer::ENCRYPTION_SMTPS; // Enable SSL encryption
+            $mail->Host = $smtp_host; //"smtp.gmail.com"; //"mail.alphafinservices.com"; // SMTP address of your email
+            $mail->SMTPAuth = $smtp_auth; //true; //false;
+            $mail->Username = $smtp_user_name;
+            $mail->Password = $smtp_pass_word;//",!!C3Z@[OM#&"; // SMTP password
+            $mail->Port = $smtp_port; //587;////465; // SMTP port
+            $mail->SMTPSecure = $smtp_secure; //PHPMailer::ENCRYPTION_STARTTLS; //PHPMailer::ENCRYPTION_SMTPS; // Enable SSL encryption
 
             // Email settings
             $mail->isHTML(true);
-            $mail->setFrom("test@gtsfastservice.com", "Developer Test");
+            $mail->setFrom($from_email, $prefix_test_or_not . "Alphafinservices Team");
             $mail->Subject = $subject;
             $mail->Body = $body;
             $mail->addAddress($to);
@@ -121,12 +122,12 @@ try {
             // SMTP settings
             $mail->isSMTP();
             // $mail->SMTPDebug = 3;  // Uncomment for debugging
-            $mail->Host = "mail.alphafinservices.com"; // SMTP address of your email
-            $mail->SMTPAuth = false;
-            $mail->Username = "info@alphafinservices.com";
-            $mail->Password = ""; // SMTP password
-            $mail->Port = 465; // SMTP port
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Enable SSL encryption
+            $mail->Host = "mail.gtsfastservice.com"; //"smtp.gmail.com"; //"mail.alphafinservices.com"; // SMTP address of your email
+            $mail->SMTPAuth = false; //true; //false;
+            $mail->Username = "test@gtsfastservice.com";
+            $mail->Password = "";//",!!C3Z@[OM#&"; // SMTP password
+            $mail->Port = 465; //587;////465; // SMTP port
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; //PHPMailer::ENCRYPTION_STARTTLS; //PHPMailer::ENCRYPTION_SMTPS; // Enable SSL encryption
 
             // Email settings
             $mail->isHTML(true);
