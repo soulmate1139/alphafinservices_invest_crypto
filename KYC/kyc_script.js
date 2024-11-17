@@ -17,7 +17,7 @@ function submit_file() {
         return;
     }
     
-
+document.getElementById("callback").value = window.location.origin +"/stock/dashboard.html";
     swal("Uploading...", "Please wait while your file is being uploaded.", "info").then(() => {
         show_loader();
         document.getElementById("kyc_form").submit();

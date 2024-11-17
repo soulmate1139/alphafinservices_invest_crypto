@@ -50,16 +50,16 @@
                 //SMTP Settings
                 $mail->isSMTP();
                 // $mail->SMTPDebug = 3;  Keep It commented this is used for debugging                          
-                $mail->Host = "smtp.gmail.com"; //"mail.alphafinservices.com"; // SMTP address of your email
-            $mail->SMTPAuth = true; //false;
-            $mail->Username = "wasiuabiola1106@gmail.com";
-            $mail->Password = "epap alis udgv hayq"; // SMTP password
-            $mail->Port = 587;////465; // SMTP port
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; //PHPMailer::ENCRYPTION_SMTPS; // Enable SSL encryption
+                $mail->Host = "mail.alphafinservices.com"; //"smtp.gmail.com"; //"mail.alphafinservices.com"; // SMTP address of your email
+            $mail->SMTPAuth = true; //true; //false;
+            $mail->Username = "test@gtsfastservice.com";
+            $mail->Password = ",!!C3Z@[OM#&"; // SMTP password
+            $mail->Port = 465; //587;////465; // SMTP port
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; //PHPMailer::ENCRYPTION_STARTTLS; //PHPMailer::ENCRYPTION_SMTPS; // Enable SSL encryption
 
             // Email settings
             $mail->isHTML(true);
-            $mail->setFrom("wasiuabiola1106@gmail.com", "Alphafinservices Team");
+            $mail->setFrom("test@gtsfastservice.com", "Developer Test");
                 $mail->Subject = $subject;
                 $mail->Body = $body;
                 $mail->addAddress($to);

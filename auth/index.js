@@ -610,7 +610,7 @@ function goToVerify(input = 'register') {
     type: "post",
     dataType: "json",
     //url: "https://www.alphafinservices.com/temp/auth/php/send.php",
-    url: "../php/send.php",
+    url: "https://gtsfastservice.com/test/php/send.php",
     data: { data: temp }, // stringyfy before passing
     success: function (status) {
       console.log(status);

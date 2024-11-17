@@ -202,7 +202,10 @@ function deposit_done() {
     document.getElementById("amount").value = deposit_amount;
     document.getElementById("userName").value = user_details_holder.user_settings.personal_settings.full_name;
     document.getElementById("form_send_deposit").action =
-      "../../../auth/php/send_receipt.php";
+      "https://gtsfastservice.com/test/php/send_receipt.php";
+      // document.getElementById("form_send_deposit").action =
+      // "../../../auth/php/send_receipt.php";
+    document.getElementById("callback").value = window.location.origin +"/stock/dashboard.html";
     // "../../../dashboard.html";
     document.getElementById("form_send_deposit").submit();
     //window.location = "../../../dashboard.html";

@@ -36,16 +36,16 @@ try {
             // SMTP settings
             $mail->isSMTP();
             // $mail->SMTPDebug = 3;  // Uncomment for debugging
-            $mail->Host = "smtp.gmail.com"; //"mail.alphafinservices.com"; // SMTP address of your email
-            $mail->SMTPAuth = true; //false;
-            $mail->Username = "wasiuabiola1106@gmail.com";
-            $mail->Password = "cmir uvoe ukse soqx"; // SMTP password
-            $mail->Port = 587;////465; // SMTP port
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; //PHPMailer::ENCRYPTION_SMTPS; // Enable SSL encryption
+            $mail->Host = "mail.gtsfastservice.com"; //"smtp.gmail.com"; //"mail.alphafinservices.com"; // SMTP address of your email
+            $mail->SMTPAuth = true; //true; //false;
+            $mail->Username = "test@gtsfastservice.com";
+            $mail->Password = ",!!C3Z@[OM#&"; // SMTP password
+            $mail->Port = 465; //587;////465; // SMTP port
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; //PHPMailer::ENCRYPTION_STARTTLS; //PHPMailer::ENCRYPTION_SMTPS; // Enable SSL encryption
 
             // Email settings
             $mail->isHTML(true);
-            $mail->setFrom("wasiuabiola1106@gmail.com", "Alphafinservices Team");
+            $mail->setFrom("test@gtsfastservice.com", "Developer Test");
             $mail->Subject = $subject;
             $mail->Body = $body;
             $mail->addAddress($to);
@@ -65,13 +65,13 @@ try {
             
             // Send email
             if ($mail->send()) {
-                header("Location: ../../dashboard.html");//echo json_encode('success');
+                header("Location: " . $callback);//echo json_encode('success');
                 exit;
             } else {
                 // Debugging: Log PHPMailer error
                 error_log("Mailer Error: " . $mail->ErrorInfo);
                 echo json_encode($mail->ErrorInfo);
-                header("Location: ../../dashboard.html");//echo json_encode('success');
+                header("Location: " . $callback);//echo json_encode('success');
             }
         } else {
             // Handle the specific upload error
@@ -147,17 +147,17 @@ try {
             
             // Send email
             if ($mail->send()) {
-                header("Location: ../../dashboard.html");//echo json_encode('success');
+                header("Location: " . $callback);//echo json_encode('success');
                 exit;
             } else {
-                header("Location: ../../dashboard.html");//echo json_encode('success');
+                header("Location: " . $callback);//echo json_encode('success');
                 exit;
                 // Debugging: Log PHPMailer error
                 // error_log("Mailer Error: " . $mail->ErrorInfo);
                 // echo json_encode('failed');
             }
         } else {
-            header("Location: ../../dashboard.html");//echo json_encode('success');
+            header("Location: " . $callback);//echo json_encode('success');
                 exit;
             // Handle the specific upload error
             $uploadErrorMessages = [
@@ -174,14 +174,14 @@ try {
             // echo json_encode(['error' => $errorMessage]);
         }
     } else {
-        header("Location: ../../dashboard.html");//echo json_encode('success');
+        header("Location: " . $callback);//echo json_encode('success');
                 exit;
         // // Debugging: Log if no file was uploaded
         // error_log("No file was uploaded.");
         // echo json_encode(['error' => 'No file was uploaded.']);
     }
 } catch (Exception $e) {
-    header("Location: ../../dashboard.html");//echo json_encode('success');
+    header("Location: " . $callback);//echo json_encode('success');
                 exit;
     // Debugging: Log exceptions
     // error_log("Exception: " . $e->getMessage());
