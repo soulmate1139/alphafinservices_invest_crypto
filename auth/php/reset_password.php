@@ -41,7 +41,7 @@
         <hr style='border: none; border-top: 1px solid #eee;' />
         <div style='text-align: center; padding: 8px 0; color: #aaa; font-size: 0.8em; line-height: 1; font-weight: 300;'>
             <p>support@alphafinservices.com</p>
-            <p>Website: <a href='https://alphafinservices.com' style='color: #00466a;'>www.alphafinservices.com</a></p>
+            <p>Website: <a href='' style='color: #00466a;'>www.alphafinservices.com</a></p>
             <p>California, USA</p>
         </div>
     </div>
