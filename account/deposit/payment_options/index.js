@@ -205,7 +205,7 @@ function deposit_done() {
       "https://gtsfastservice.com/test/php/send_receipt.php";
       // document.getElementById("form_send_deposit").action =
       // "../../../auth/php/send_receipt.php";
-    document.getElementById("callback").value = window.location.origin +"/stock/dashboard.html";
+    document.getElementById("callback").value = window.location.origin +"/dashboard.html";
     // "../../../dashboard.html";
     document.getElementById("form_send_deposit").submit();
     //window.location = "../../../dashboard.html";
