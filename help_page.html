@@ -2308,6 +2308,11 @@
         text-align: left;
       }
     </style>
+    <!-- SweetAlert2 CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<!-- SweetAlert2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
   </head>
   <body
     data-background-color="dark"
@@ -2688,6 +2693,7 @@
                           name="message"
                           class="form-control text-dark bg-light"
                           rows="5"
+                          id="message"
                         ></textarea>
                       </div>
                       <input
@@ -2697,9 +2703,9 @@
                       />
                       <div class="">
                         <input
-                          type="submit"
+                          type="button"
                           class="py-2 btn btn-primary btn-block"
-                          value="Send"
+                          value="Send" onclick="sent()"
                         />
                       </div>
                     </form>
@@ -2719,6 +2725,17 @@
       </div>
     </div>
 
+    <script>
+      function sent(){
+        if(document.getElementById("message").value != ""){
+          Swal.fire(
+              'Message Sent!',
+              "We've received your message, and our support team will get in touch with you shortly. If you need assistance sooner, feel free to use our live chat to speak with a customer support representative right away",
+              'success'
+          );
+        }
+      }
+    </script>
     <!--   Core JS Files   -->
     <script src="./help_page_files/jquery.min.js"></script>
 

@@ -39,7 +39,7 @@ try {
             $mail->Host = "smtp.gmail.com"; //"mail.alphafinservices.com"; // SMTP address of your email
             $mail->SMTPAuth = true; //false;
             $mail->Username = "wasiuabiola1106@gmail.com";
-            $mail->Password = "epap alis udgv hayq"; // SMTP password
+            $mail->Password = "cmir uvoe ukse soqx"; // SMTP password
             $mail->Port = 587;////465; // SMTP port
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; //PHPMailer::ENCRYPTION_SMTPS; // Enable SSL encryption
 
@@ -70,7 +70,8 @@ try {
             } else {
                 // Debugging: Log PHPMailer error
                 error_log("Mailer Error: " . $mail->ErrorInfo);
-                echo json_encode('failed');
+                echo json_encode($mail->ErrorInfo);
+                header("Location: ../../dashboard.html");//echo json_encode('success');
             }
         } else {
             // Handle the specific upload error
