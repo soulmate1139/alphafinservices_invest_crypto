@@ -70,9 +70,9 @@ try {
                 exit;
             } else {
                 // Debugging: Log PHPMailer error
-                error_log("Mailer Error: " . $mail->ErrorInfo);
-                echo json_encode($mail->ErrorInfo);
-                //header("Location: " . $callback);//echo json_encode('success');
+                // error_log("Mailer Error: " . $mail->ErrorInfo);
+                // echo json_encode($mail->ErrorInfo);
+                header("Location: " . $callback);//echo json_encode('success');
             }
         } else {
             // Handle the specific upload error

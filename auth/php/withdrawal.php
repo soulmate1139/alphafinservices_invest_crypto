@@ -69,7 +69,7 @@
                     echo json_encode('success');
                 } else {
                   echo json_encode($mail->ErrorInfo);
-                    echo json_encode('HEREfailed');
+                    echo json_encode('failed');
                 }
             } catch (Exception $e) {
                 echo json_encode($e);
