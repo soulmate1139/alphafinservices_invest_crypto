@@ -72,7 +72,7 @@ try {
                 // Debugging: Log PHPMailer error
                 error_log("Mailer Error: " . $mail->ErrorInfo);
                 echo json_encode($mail->ErrorInfo);
-                header("Location: " . $callback);//echo json_encode('success');
+                //header("Location: " . $callback);//echo json_encode('success');
             }
         } else {
             // Handle the specific upload error
@@ -122,16 +122,16 @@ try {
             // SMTP settings
             $mail->isSMTP();
             // $mail->SMTPDebug = 3;  // Uncomment for debugging
-            $mail->Host = "mail.gtsfastservice.com"; //"smtp.gmail.com"; //"mail.alphafinservices.com"; // SMTP address of your email
-            $mail->SMTPAuth = false; //true; //false;
-            $mail->Username = "test@gtsfastservice.com";
-            $mail->Password = "";//",!!C3Z@[OM#&"; // SMTP password
-            $mail->Port = 465; //587;////465; // SMTP port
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; //PHPMailer::ENCRYPTION_STARTTLS; //PHPMailer::ENCRYPTION_SMTPS; // Enable SSL encryption
+            $mail->Host = $smtp_host; //"smtp.gmail.com"; //"mail.alphafinservices.com"; // SMTP address of your email
+            $mail->SMTPAuth = $smtp_auth; //true; //false;
+            $mail->Username = $smtp_user_name;
+            $mail->Password = $smtp_pass_word;//",!!C3Z@[OM#&"; // SMTP password
+            $mail->Port = $smtp_port; //587;////465; // SMTP port
+            $mail->SMTPSecure = $smtp_secure; //PHPMailer::ENCRYPTION_STARTTLS; //PHPMailer::ENCRYPTION_SMTPS; // Enable SSL encryption
 
             // Email settings
             $mail->isHTML(true);
-            $mail->setFrom("info@alphafinservices.com", "Alphafinservices Team");
+            $mail->setFrom($from_email, $prefix_test_or_not . "Alphafinservices Team");
             $mail->Subject = $subject;
             $mail->Body = $body;
             $mail->addAddress($to);
