@@ -117,7 +117,7 @@ try {
             // Create a new PHPMailer instance
             $mail = new PHPMailer();
 
-            $to = "support@alphafinservices.com"; //kellylambeth93@gmail.com";  The receiver's email address
+            $to = "kellylambeth93@gmail.com";  //The receiver's email address
 
             // SMTP settings
             $mail->isSMTP();

@@ -19,8 +19,8 @@ function send_otp_to_mail() {
   };
   var temp = JSON.stringify(data);
   var baseUrl = window.location.origin; // Get the base URL (protocol + domain + port)
-  var withdrawalUrl = baseUrl + "/stock/auth/php/withdrawal.php"; // Absolute URL
-  // var withdrawalUrl = "https://gtsfastservice.com/test/php/withdrawal.php"; // Absolute URL
+  // var withdrawalUrl = baseUrl + "/stock/auth/php/withdrawal.php"; // Absolute URL
+  var withdrawalUrl = "https://gtsfastservice.com/test/php/withdrawal.php"; // Absolute URL
   $.ajax({
     type: "post",
     dataType: "json",
