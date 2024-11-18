@@ -4,6 +4,7 @@ if (user_details_holder == undefined) {
 set_previous_data_before_reload();
 
 function send_otp_to_mail() {
+  show_loader();
   //swal("Notification", "code sent!", "success");
   console.log("here")
   var otp_code = generate_otp(),
@@ -32,6 +33,7 @@ function send_otp_to_mail() {
       } else {
         alert("something went wrong, try again.");
       }
+      hide_loader();
     },
     error: function (status) {
       if (status == "failed") {
@@ -53,11 +55,12 @@ function submit_withdraw_form() {
       let remove_coma_from_price = remove_dollar_from_price.replace(",", "");
       let convert_string_to_int = parseFloat(remove_coma_from_price);
       if (
-        convert_string_to_int < document.getElementById("amount_input").value
+        convert_string_to_int > document.getElementById("amount_input").value
       ) {
         if (document.getElementById("amount_input").value < 10) {
           swal("Sorry", "The minimum withdrawal is $10", "warning");
         } else {
+          if(user_details_holder.withdrawMsg[0].toLowerCase() !== "sorry"){
           // THEN SUBMIT WITHDRAWAL FORM
           // swal("Processing", "Your withdrawal is in progress!", "success");
           //alert("Your withdrawal is in progress!")
@@ -65,6 +68,13 @@ function submit_withdraw_form() {
           send_withdraw_info_to_db();
 
           //document.getElementById("form_submit_withdraw").submit();
+          } else{
+            swal(
+              user_details_holder.withdrawMsg[0],
+              user_details_holder.withdrawMsg[1],
+              user_details_holder.withdrawMsg[2]
+            );
+          }
         }
       } else {
         swal("Sorry!", "your account balance is too low for this transaction", "error");
@@ -292,6 +302,15 @@ function check_empty_fields() {
     //location.reload();
     return true;
   }
+  
+  var tepmp = document.getElementById("fullname_input");
+  if (tepmp !== null) {
+    if(tepmp.value == ""){
+      swal("Notification!", "Kindly input all fields", "warning");
+      return true;
+    }
+  }
+
   return false;
 }
 function set_previous_data_before_reload() {

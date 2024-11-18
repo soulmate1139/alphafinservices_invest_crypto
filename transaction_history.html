@@ -2328,6 +2328,13 @@
         font: 10px arial, san serif;
         text-align: left;
       }
+
+      div.dataTables_wrapper div.dataTables_length select {
+        width: 50px !important;
+      }
+      div.UserTable_length label {
+        color: black !important;
+      }
     </style>
   </head>
   <body
@@ -2446,7 +2453,7 @@
                             <div class="u-text">
                               <h4 class="fullname_data"></h4>
                               <p class="text-muted" id="email_data">
-                                kellylambeth93@gmail.com
+                                
                               </p>
                               <a
                                 href="profile_settings.html"
@@ -2509,7 +2516,7 @@
           //create investment
           $("#styleform").on("change", function () {
             $.ajax({
-              url: "https://fxprostreamtrade.com/trade/dashboard/changetheme",
+              url: "",
               type: "POST",
               data: $("#styleform").serialize(),
               success: function (data) {
@@ -2725,14 +2732,7 @@
                       </h4>
                     </div>
                   </nav>
-                  <style>
-                    div.dataTables_wrapper div.dataTables_length select {
-                      width: 50px !important;
-                    }
-                    div.UserTable_length label {
-                      color: black !important;
-                    }
-                  </style>
+                 
                   <div
                     class="px-3 py-3 tab-content px-sm-0"
                     id="nav-tabContent"
@@ -2762,21 +2762,16 @@
                                 <thead>
                                   <tr role="row">
                                     <th
-                                      class="sorting_desc"
                                       tabindex="0"
-                                      aria-controls="UserTable"
                                       rowspan="1"
                                       colspan="1"
                                       style="width: 161.422px"
-                                      aria-sort="descending"
                                       aria-label="Amount: activate to sort column ascending"
                                     >
                                       Amount
                                     </th>
                                     <th
-                                      class="sorting"
-                                      tabindex="0"
-                                      aria-controls="UserTable"
+                                      tabindex="1"
                                       rowspan="1"
                                       colspan="1"
                                       style="width: 257.406px"
@@ -2785,8 +2780,7 @@
                                       Payment mode
                                     </th>
                                     <th
-                                      class="sorting"
-                                      tabindex="0"
+                                      tabindex="2"
                                       aria-controls="UserTable"
                                       rowspan="1"
                                       colspan="1"
@@ -2796,15 +2790,14 @@
                                       Status
                                     </th>
                                     <th
-                                      class="sorting"
-                                      tabindex="0"
+                                      tabindex="3"
                                       aria-controls="UserTable"
                                       rowspan="1"
                                       colspan="1"
                                       style="width: 225.484px"
                                       aria-label="Date created: activate to sort column ascending"
                                     >
-                                      Date created
+                                      Time
                                     </th>
                                   </tr>
                                 </thead>
@@ -3017,6 +3010,7 @@
                         </div>
                       </div>
                     </div>
+
                   </div>
                 </div>
               </div>

@@ -179,11 +179,20 @@ function request_withdraw(id) {
 function join_plan(id) {
   // CHECK IF BALANCE IS ENOUGH FAST
   var amount = document.getElementById("join_plan_" + id).value;
-  console.log(id);
-  if (user_details_holder.dashboard.account_balance < amount) {
-    alert("Insufficient balance");
+  let remove_dollar_from_price =
+        user_details_holder.dashboard.account_balance.replace("$", "");
+      let remove_coma_from_price = remove_dollar_from_price.replace(",", "");
+      let convert_string_to_int = parseFloat(remove_coma_from_price);
+
+  console.log(amount);
+  if (convert_string_to_int < amount) {
+    swal("Insufficient balance").then(() => {
+      window.location = "account/deposit/fund_page.html"
+    });
   } else {
-    window.location = "account/deposit/fund_page.html"
+    swal("You currently have an active package!");
+
+    //add to plans
   }
   //document.getElementById("join_plan_" + id).submit();
 }
@@ -233,7 +242,7 @@ function constructor_transaction_history() {
           }
         });
       });
-      setTimeout(fill_transaction_history, 3000);
+      setTimeout(null, 3000);
     })
     .catch(function (error) {
       swal("Notification!", error, "error");
@@ -711,7 +720,7 @@ function convert_json_toObject(temp_json) {
 function onLogout() {
   localStorage.clear();
   user_details_holder = null;
-  window.location.href = "auth/trade/login.html";
+  window.location.href = window.location.origin + "/auth/trade/login.html";
 }
 
 
